@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-template-for-ecommerce-site",
+  "name": "petstar",
   "version": "0.1.0",
   "description": "A beautiful e-commerce template with a flat design.",
   "engines": {
@@ -18,8 +18,8 @@
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
-    "build": "babel-node tools/build.js && npm run open:dist",
-    "test": "node --harmony_proxies node_modules/jest/bin/jest",
+    "build": "babel-node tools/build.js",
+    "test": "node --harmony node_modules/jest/bin/jest",
     "test:cover": "npm run test -- --coverage ",
     "test:cover:travis": "npm run test:cover && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "test:watch": "npm run test -- --watch",
@@ -31,6 +31,7 @@
   "dependencies": {
     "body-parser": "^1.16.1",
     "dotenv": "^4.0.0",
+    "express": "4.16.2",
     "express-session": "^1.15.1",
     "mongoose": "^4.8.2",
     "object-assign": "4.1.0",
@@ -97,7 +98,15 @@
     "webpack-hot-middleware": "2.13.2",
     "webpack-md5-hash": "0.0.5"
   },
-  "keywords": ["react", "redux", "ecommerce", "Bejoy George", "react-slingshot", "express", "node"],
+  "keywords": [
+    "react",
+    "redux",
+    "ecommerce",
+    "Bejoy George",
+    "react-slingshot",
+    "express",
+    "node"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bdarksider/ecommerce-react.git"
